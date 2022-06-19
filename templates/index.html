@@ -1,0 +1,31 @@
+{% extends "starter.html" %}
+{% block title %} Home {% endblock %}
+{% load static %}
+{% block your_css %}
+<link rel="stylesheet" href="{% static 'css/post.css' %}">
+{% endblock %}
+{% block body %}
+
+{% for post in posts %}
+
+<div class="post">
+    <div class="header">
+        <div class="avatar"><img src="{{user_profile.profileimg.url}}" alt="Avatar"></div>
+        <div class="username">
+            {{post.user}}
+        </div>
+    </div>
+    <div class="title">
+        {{post.title}}
+    </div>
+    <div class="main">
+        {{post.blog_text}}
+    </div>
+    <div class="post-image">
+        <img src="{{post.image.url}}" alt="">
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

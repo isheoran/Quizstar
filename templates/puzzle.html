@@ -1,0 +1,30 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="{% static 'css/puzzle.css' %}">
+</head>
+<body>
+    <div style="display: none" id="jsonData" data-json="{{ data }}"></div>
+    <div class="headerr">
+        <a href="/">Home</a>
+    </div>
+    <div class="main-div">
+        <div class="inner-div">
+            <h2 class="title">Sum of 2 integers</h2>
+            <p class="question">Find the sum of 23 and 15</p>
+            <label for="answer">Answer here</label>
+            <input type="text" id="answer" name="answer">
+            <div class="status"></div>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    <script src="{% static 'js/puzzle.js' %}"></script>
+</body>
+</html>

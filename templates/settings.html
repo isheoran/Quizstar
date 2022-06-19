@@ -1,0 +1,48 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+</head>
+<body>
+    <div class="header">
+        <a href="/">Home</a>
+    </div>
+    <div class="wrapper">
+        <div class="title">
+            <p>
+                Account settings for {{user_profile.user.username}}
+            </p>
+        </div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="details">
+                <div class="row">
+                    <input type="text" name="name" value="{{user_profile.name}}" placeholder="Name">
+                    <label for="Name">Name</label>
+                </div>
+                <div class="row">
+                    <textarea name="bio" id="bio" cols="30" rows="10">{{user_profile.bio}}</textarea>
+                    <label for="bio">Bio</label>
+                </div>
+                <div class="row">
+                    <input type="text" name="address" placeholder="Address" value="{{user_profile.address}}">
+                    <label for="address">Address</label>
+                </div>
+            </div>
+            <div class="photo">
+                <label for="profileimg">Profile Image</label>
+                <img src="{{user_profile.profileimg.url}}" alt="Profile Picture">
+                <input type="file" name="image">
+                <button type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

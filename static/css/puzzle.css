@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+} 
+
+html {
+    font-size: 62.5%;
+}
+
+.headerr {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient( circle farthest-corner at -3.1% -4.3%,  rgba(57,255,186,1) 0%, rgba(21,38,82,1) 90% );
+}
+
+.headerr a {
+    color: rgb(182, 64, 166);
+    margin-left: 50px;
+    font-size: large;
+}
+
+.main-div {
+    width: 100vw;
+    min-height: 90vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(206, 92%, 94%);
+}
+
+.inner-div {
+    background-color: #F0F0F0;
+    padding: 3rem;
+    border-radius: 1rem;
+    margin: 10px;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.inner-div h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 1rem 0 2.5rem 0;
+}
+
+#submit,.btn {
+    padding: 1rem 3rem;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
+    display: block;
+    margin: auto;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #74b9ff;
+    margin-top: 4rem;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: #0984e3;
+}
+
+.question {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.inner-div label {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#answer {
+    height: 4rem;
+    border: #0984e3;
+}
+
+.status {
+    font-size: 2rem;
+    margin: 1.5rem;
+    font-weight: bold;
+}

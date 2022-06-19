@@ -1,0 +1,47 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+</head>
+<body>
+    <div style="display: none" id="jsonData" data-json="{{ data }}"></div>
+    <div class="headerr">
+        <a href="/">Home</a>
+    </div>
+    <div class="main-div">
+        <div class="inner-div">
+            <h2 class="question">Question comes here</h2>
+            <ul class="optionslist">
+                <li>
+                    <input type="radio" name="answer" id="option1" class="answer">
+                    <label for="ans1" id="op1">Answer Option</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="option2" class="answer">
+                    <label for="ans1" id="op2">Answer Option</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="option3" class="answer">
+                    <label for="ans1" id="op3">Answer Option</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="option4" class="answer">
+                    <label for="ans1" id="op4">Answer Option</label>
+                </li>
+            </ul>
+            <div class="anss">Answer : option1</div>
+            <div class="selectedOption"></div>
+            <div class="scoreArea" id="showScore"></div>
+            <button id="submit">Save and Next</button>
+        </div>
+    </div>
+    <script src="{% static 'js/quiz.js' %}"></script>
+</body>
+</html>
